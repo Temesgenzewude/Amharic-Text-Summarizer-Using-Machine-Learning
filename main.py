@@ -19,11 +19,9 @@ This code performs text summarization on a PDF document. Let's analyze it step b
 
 9. If the predicted language (lang) is 'am' (Amharic), the summarization process begins.
 
-
 10. The extraction summary is generated using the _get_summary function from the extraction_summary module. The pparser instance and a hyperparameter value of 1.5 are passed as arguments. The extraction summary represents a summary of the document based on important sentences extracted from the document.
 
 11. The extracted summary is stored in the ext_summary variable.
-
 
 
 12. The cosine summary is generated using the build_summary function from the cosine_similarity module. The pparser.sentences (which contains the sentences extracted from the document) and pparser.stop_words (a list of stop words) are passed as arguments. The cosine summary represents a summary of the document based on the similarity of sentences.
