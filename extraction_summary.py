@@ -1,3 +1,26 @@
+
+"""
+This code is another implementation of a document summarization algorithm. It uses a frequency-based approach to score sentences and generate a summary. Let's go through the code step by step:
+1. The code starts by importing necessary modules (os, sys, re) and packages. It also imports a custom module pdfParser as pp.
+
+2. It defines a function _create_dictionary_table that takes a list of words as input and returns a dictionary representing the word frequency table. The function iterates over the words, counts their occurrences, and stores them in the frequency_table dictionary.
+
+3. The _calculate_sentence_scores function takes a list of sentences and the frequency_table as input and returns a dictionary representing the weight of each sentence. The function iterates over the sentences, splits them into words, and checks each word against the frequency_table. If a word is found in the table, its frequency is assigned as the weight for the sentence in the sentence_weight dictionary.
+
+4. The _calculate_average_score function takes the sentence_weight dictionary as input and calculates the average score for the sentences. It sums up all the scores in the sentence_weight dictionary and divides the sum by the number of sentences to get the average score.
+
+5. The _get_article_summary function takes the list of sentences, sentence_weight dictionary, and a threshold value as input. It generates the summary by iterating over the sentences, checking if each sentence is in the sentence_weight dictionary and if its weight is above the threshold. If a sentence meets the criteria, it is added to the article_summary string. The function also removes duplicate phrases using regular expressions.
+
+6. The _get_summary function takes an instance of the pdfPrser class (pparser) and an optional threshold parameter as input. It extracts the sentences from pparser, creates the frequency_table using _create_dictionary_table, calculates the sentence scores using _calculate_sentence_scores, calculates the threshold using _calculate_average_score, and generates the summary using _get_article_summary.
+
+7. The __main__ block is the entry point of the script. It performs the following steps:
+
+    =>It assigns an empty string to the book_url variable, representing the URL or path to the PDF document.
+    =>It creates an instance of the pdfPrser class (pparser) from the pdfParser module, passing the book_url as the argument.
+    =>It calls the _get_summary function with pparser as the input and assigns the result to the article_summary variable.
+    =>It prints the article_summary.
+
+"""
 import os, sys
 import re
 currentdir = os.path.dirname(os.path.realpath(__file__))
