@@ -34,17 +34,17 @@ if __name__ == "__main__":
     pparser = pp.pdfPrser(book_url)
     lang = detect_language(pparser.clean_text)
     if  lang == 'am':
-        print('woriking...')
+        # print('woriking...')
         #wordclouds
-        print('word cloud...')
+        # print('word cloud...')
         wordcloud_am.generate_wordcloud(pparser.words, pparser.stop_words, 'word_cloud.png')
         #extraction
         print('extraction summary...')
         hyper_param = 1.5
         ext_summary = extraction_summary._get_summary(pparser,hyper_param)
-        save_text_file('extraction_summary.txt',ext_summary)        
+        # save_text_file('extraction_summary.txt',ext_summary)        
         #cosine summary
-        print('cosine summary...')
+        # print('cosine summary...')
         cos_summary = cosine_similarity.build_summary(pparser.sentences,pparser.stop_words)
         save_text_file('cosine_summary.txt',cos_summary)
         #abstract summary
