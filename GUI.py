@@ -4,13 +4,8 @@ from tkinter import scrolledtext
 from tkinter import messagebox
 import os
 
-# Import your existing modules
-import fasttext
-from pathlib import Path
-import pdfParser as pp
-import extraction_summary
-import cosine_similarity
-import wordcloud_am
+
+
 
 class TextSummarizerGUI:import tkinter as tk
 from tkinter import ttk
@@ -24,7 +19,7 @@ from pathlib import Path
 import pdfParser as pp
 import extraction_summary
 import cosine_similarity
-import wordcloud_am
+
 
 class TextSummarizerGUI:
     def __init__(self, master):
@@ -64,8 +59,7 @@ class TextSummarizerGUI:
             lang = detect_language(pparser.clean_text)
 
             if lang == 'am':
-                # Wordclouds
-                wordcloud_am.generate_wordcloud(pparser.words, pparser.stop_words, 'word_cloud.png')
+               
 
                 # Extraction summary
                 hyper_param = 1.5
@@ -125,8 +119,8 @@ if __name__ == "__main__":
         self.result_text_label = ttk.Label(self.master, text="Summarized Text:")
         self.result_text_label.grid(row=2, column=0, padx=10, pady=10)
 
-        self.result_text = scrolledtext.ScrolledText(self.master, wrap=tk.WORD, width=60, height=10)
-        self.result_text.grid(row=3, column=0, columnspan=2, padx=10, pady=10)
+        self.result_text = scrolledtext.ScrolledText(self.master, wrap=tk.WORD, width=100, height=50)
+        self.result_text.grid(row=5, column=0, columnspan=4, padx=10, pady=10)
 
     def summarize_text(self):
         url = self.url_entry.get()
@@ -143,8 +137,7 @@ if __name__ == "__main__":
             lang = detect_language(pparser.clean_text)
 
             if lang == 'am':
-                # Wordclouds
-                wordcloud_am.generate_wordcloud(pparser.words, pparser.stop_words, 'word_cloud.png')
+               
 
                 # Extraction summary
                 hyper_param = 1.5
