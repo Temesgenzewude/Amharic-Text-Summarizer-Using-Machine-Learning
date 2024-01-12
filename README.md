@@ -32,6 +32,5 @@ Reference links: <br/>
 - https://towardsdatascience.com/understand-text-summarization-and-create-your-own-summarizer-in-python-b26a9f09fc70
 - https://github.com/icoxfog417/awesome-text-summarization#motivation
 - https://blog.floydhub.com/gentle-introduction-to-text-summarization-in-machine-learning/
-- https://github.com/AustinKrause/nyt-article-summarizer
 - https://www.machinelearningplus.com/nlp/cosine-similarity/
 
