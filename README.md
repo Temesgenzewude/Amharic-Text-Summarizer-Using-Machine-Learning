@@ -1,6 +1,10 @@
 # Amharic text summarizer
-
-
+<b>Team Members </b>
+Aklile Yilma UGR/7107/12
+Joshua Tesfaye UGR/0359/12
+Temesgen Zewude UGR/3848/12
+Abinet Anamo UGR/7110/12
+Henok Mekuanint UGR/2272/12
 
 Algorithm 1: Extraction
 1. Extract all the sentences from text.
