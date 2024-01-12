@@ -16,6 +16,7 @@ import os
 # Import your existing modules
 import fasttext
 from pathlib import Path
+
 import pdfParser as pp
 import extraction_summary
 import cosine_similarity
@@ -74,6 +75,7 @@ class TextSummarizerGUI:
 
             else:
                 messagebox.showwarning("Unsupported Language", f"Language not supported for {url}.")
+        
         except Exception as e:
             messagebox.showerror("Error", f"An error occurred: {str(e)}")
 
