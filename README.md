@@ -6,14 +6,14 @@ Temesgen Zewude UGR/3848/12
 Abinet Anamo UGR/7110/12
 Henok Mekuanint UGR/2272/12
 
-Algorithm 1: Extraction
+#Algorithm 1: Extraction
 1. Extract all the sentences from text.
 2. Extract all the words from text.
 3. Assign a score to each word.
 4. Assign a score to each sentence.
 5. Put the sentences with the highest score together in chronological order to produce the summary.
 
-Algorithm 2: Cosine Similarity
+#Algorithm 2: Cosine Similarity
 1. TF-IDF weights to each individual word in a sentence
 2. Generate cosine-similarity of each TF-IDF sentence pair matrix
 3. Average the weights of each vector
